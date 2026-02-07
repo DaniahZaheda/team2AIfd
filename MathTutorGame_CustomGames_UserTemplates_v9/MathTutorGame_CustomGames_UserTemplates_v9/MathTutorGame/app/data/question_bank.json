@@ -1,0 +1,2187 @@
+[
+  {
+    "type": "multiple_choice",
+    "prompt": "عدّي النجوم ⭐: ⭐⭐⭐⭐⭐⭐\nكم العدد؟",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer_index": 1,
+    "answer": "6",
+    "explanation": "نعدّ واحدًا واحدًا.",
+    "id": "G1_count_to_20_Q001",
+    "grade": 1,
+    "skill_id": "G1_count_to_20"
+  },
+  {
+    "type": "input_number",
+    "prompt": "اكتبي العدد الذي يسبق 10:",
+    "answer": "9",
+    "explanation": "العدد الذي يسبق 10 هو 9.",
+    "id": "G1_count_to_20_Q002",
+    "grade": 1,
+    "skill_id": "G1_count_to_20"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 7، 8، __ ، 10",
+    "answer": "9",
+    "explanation": "العدد بين 8 و10 هو 9.",
+    "id": "G1_count_to_20_Q003",
+    "grade": 1,
+    "skill_id": "G1_count_to_20"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الإشارة الصحيحة: 15 __ 6",
+    "choices": [
+      "<",
+      ">",
+      "="
+    ],
+    "answer_index": 1,
+    "answer": ">",
+    "explanation": "الأكبر يأخذ علامة > والأصغر <.",
+    "id": "G1_compare_0_20_Q001",
+    "grade": 1,
+    "skill_id": "G1_compare_0_20"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد أصغر؟",
+    "choices": [
+      "6",
+      "15",
+      "15",
+      "6"
+    ],
+    "answer_index": 0,
+    "answer": "6",
+    "explanation": "الأصغر هو الأقل قيمة.",
+    "id": "G1_compare_0_20_Q002",
+    "grade": 1,
+    "skill_id": "G1_compare_0_20"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "إذا كان 15 أكبر من 6 نكتب الإشارة __",
+    "answer": ">",
+    "explanation": "علامة أكبر من هي >.",
+    "id": "G1_compare_0_20_Q003",
+    "grade": 1,
+    "skill_id": "G1_compare_0_20"
+  },
+  {
+    "type": "drag_drop_sort",
+    "prompt": "رتّبي الأعداد من الأصغر إلى الأكبر:",
+    "items": [
+      "3",
+      "10",
+      "8"
+    ],
+    "answer": [
+      "3",
+      "8",
+      "10"
+    ],
+    "explanation": "نرتب من الأقل إلى الأعلى.",
+    "id": "G1_order_0_20_Q001",
+    "grade": 1,
+    "skill_id": "G1_order_0_20"
+  },
+  {
+    "type": "drag_drop_sort",
+    "prompt": "رتّبي الأعداد من الأكبر إلى الأصغر:",
+    "items": [
+      "5",
+      "4",
+      "10",
+      "17"
+    ],
+    "answer": [
+      "17",
+      "10",
+      "5",
+      "4"
+    ],
+    "explanation": "نرتب من الأعلى إلى الأقل.",
+    "id": "G1_order_0_20_Q002",
+    "grade": 1,
+    "skill_id": "G1_order_0_20"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "ما هو العدد الأوسط؟",
+    "choices": [
+      "3",
+      "8",
+      "10"
+    ],
+    "answer_index": 1,
+    "answer": "8",
+    "explanation": "الوسط هو الثاني بعد الترتيب.",
+    "id": "G1_order_0_20_Q003",
+    "grade": 1,
+    "skill_id": "G1_order_0_20"
+  },
+  {
+    "type": "drag_drop_match",
+    "prompt": "طابقي منازل العدد 90:",
+    "left_items": [
+      "العشرات",
+      "الآحاد"
+    ],
+    "right_items": [
+      "9",
+      "0"
+    ],
+    "answer": {
+      "العشرات": "9",
+      "الآحاد": "0"
+    },
+    "explanation": "العشرات هي رقم العشرات، والآحاد رقم الآحاد.",
+    "id": "G1_place_value_tens_ones_Q001",
+    "grade": 1,
+    "skill_id": "G1_place_value_tens_ones"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "في العدد 90 عدد العشرات = __",
+    "answer": "9",
+    "explanation": "نقسم على 10 بدون باقي.",
+    "id": "G1_place_value_tens_ones_Q002",
+    "grade": 1,
+    "skill_id": "G1_place_value_tens_ones"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "في العدد 90 رقم الآحاد = __",
+    "answer": "0",
+    "explanation": "رقم الآحاد هو آخر رقم.",
+    "id": "G1_place_value_tens_ones_Q003",
+    "grade": 1,
+    "skill_id": "G1_place_value_tens_ones"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 0 + 6 = ؟",
+    "answer": "6",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G1_add_within_10_Q001",
+    "grade": 1,
+    "skill_id": "G1_add_within_10"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 0 + 6",
+    "choices": [
+      "6",
+      "7",
+      "5",
+      "16"
+    ],
+    "answer_index": 0,
+    "answer": "6",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G1_add_within_10_Q002",
+    "grade": 1,
+    "skill_id": "G1_add_within_10"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 0 + __ = 6",
+    "answer": "6",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G1_add_within_10_Q003",
+    "grade": 1,
+    "skill_id": "G1_add_within_10"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 3 + 9 = ؟",
+    "answer": "12",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G1_add_within_18_Q001",
+    "grade": 1,
+    "skill_id": "G1_add_within_18"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 3 + 9",
+    "choices": [
+      "12",
+      "13",
+      "11",
+      "22"
+    ],
+    "answer_index": 0,
+    "answer": "12",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G1_add_within_18_Q002",
+    "grade": 1,
+    "skill_id": "G1_add_within_18"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 3 + __ = 12",
+    "answer": "9",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G1_add_within_18_Q003",
+    "grade": 1,
+    "skill_id": "G1_add_within_18"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 3 − 2 = ؟",
+    "answer": "1",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G1_sub_within_10_Q001",
+    "grade": 1,
+    "skill_id": "G1_sub_within_10"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 3 − 2",
+    "choices": [
+      "1",
+      "2",
+      "0",
+      "11"
+    ],
+    "answer_index": 0,
+    "answer": "1",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G1_sub_within_10_Q002",
+    "grade": 1,
+    "skill_id": "G1_sub_within_10"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 3 − __ = 1",
+    "answer": "2",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G1_sub_within_10_Q003",
+    "grade": 1,
+    "skill_id": "G1_sub_within_10"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 4 − 1 = ؟",
+    "answer": "3",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G1_sub_within_18_Q001",
+    "grade": 1,
+    "skill_id": "G1_sub_within_18"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 4 − 1",
+    "choices": [
+      "3",
+      "4",
+      "2",
+      "13"
+    ],
+    "answer_index": 0,
+    "answer": "3",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G1_sub_within_18_Q002",
+    "grade": 1,
+    "skill_id": "G1_sub_within_18"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 4 − __ = 3",
+    "answer": "1",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G1_sub_within_18_Q003",
+    "grade": 1,
+    "skill_id": "G1_sub_within_18"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد أكبر؟",
+    "choices": [
+      "37",
+      "79",
+      "36",
+      "78"
+    ],
+    "answer_index": 1,
+    "answer": "79",
+    "explanation": "نقارن المنازل من اليسار.",
+    "id": "G1_numbers_21_99_Q001",
+    "grade": 1,
+    "skill_id": "G1_numbers_21_99"
+  },
+  {
+    "type": "drag_drop_sort",
+    "prompt": "رتّبي الأعداد من الأصغر إلى الأكبر:",
+    "items": [
+      "37",
+      "79",
+      "39"
+    ],
+    "answer": [
+      "37",
+      "39",
+      "79"
+    ],
+    "explanation": "نرتب حسب القيمة.",
+    "id": "G1_numbers_21_99_Q002",
+    "grade": 1,
+    "skill_id": "G1_numbers_21_99"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 37، 38، __ ، 40",
+    "answer": "39",
+    "explanation": "يزيد العدد واحدًا كل مرة.",
+    "id": "G1_numbers_21_99_Q003",
+    "grade": 1,
+    "skill_id": "G1_numbers_21_99"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الشكل الذي له 3 أضلاع هو:",
+    "choices": [
+      "مثلث",
+      "مربع",
+      "دائرة",
+      "مستطيل"
+    ],
+    "answer_index": 0,
+    "answer": "مثلث",
+    "explanation": "المثلث له ثلاثة أضلاع.",
+    "id": "G1_shapes_basic_Q001",
+    "grade": 1,
+    "skill_id": "G1_shapes_basic"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الخطّان المتوازيان:",
+    "choices": [
+      "لا يلتقيان",
+      "يلتقيان دائمًا",
+      "لهما نفس نقطة البداية",
+      "لا يمكن رسمهما"
+    ],
+    "answer_index": 0,
+    "answer": "لا يلتقيان",
+    "explanation": "المتوازيان لا يلتقيان.",
+    "id": "G1_shapes_basic_Q002",
+    "grade": 1,
+    "skill_id": "G1_shapes_basic"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "الشكل الذي له 4 أضلاع متساوية هو __",
+    "answer": "مربع",
+    "explanation": "المربع أربعة أضلاع متساوية.",
+    "id": "G1_shapes_basic_Q003",
+    "grade": 1,
+    "skill_id": "G1_shapes_basic"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الإشارة الصحيحة: 522 __ 957",
+    "choices": [
+      "<",
+      ">",
+      "="
+    ],
+    "answer_index": 0,
+    "answer": "<",
+    "explanation": "الأكبر يأخذ علامة > والأصغر <.",
+    "id": "G2_compare_to_999_Q001",
+    "grade": 2,
+    "skill_id": "G2_compare_to_999"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد أصغر؟",
+    "choices": [
+      "522",
+      "957",
+      "522",
+      "957"
+    ],
+    "answer_index": 0,
+    "answer": "522",
+    "explanation": "الأصغر هو الأقل قيمة.",
+    "id": "G2_compare_to_999_Q002",
+    "grade": 2,
+    "skill_id": "G2_compare_to_999"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "إذا كان 957 أكبر من 522 نكتب الإشارة __",
+    "answer": ">",
+    "explanation": "علامة أكبر من هي >.",
+    "id": "G2_compare_to_999_Q003",
+    "grade": 2,
+    "skill_id": "G2_compare_to_999"
+  },
+  {
+    "type": "drag_drop_match",
+    "prompt": "اسحبي كل عدد إلى (زوجي) أو (فردي):",
+    "left_items": [
+      "49",
+      "50",
+      "58",
+      "13",
+      "21",
+      "54"
+    ],
+    "right_items": [
+      "زوجي",
+      "فردي"
+    ],
+    "answer": {
+      "49": "فردي",
+      "50": "زوجي",
+      "58": "زوجي",
+      "13": "فردي",
+      "21": "فردي",
+      "54": "زوجي"
+    },
+    "explanation": "الزوجي ينتهي بـ 0,2,4,6,8.",
+    "id": "G2_odd_even_Q001",
+    "grade": 2,
+    "skill_id": "G2_odd_even"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "العدد 32 هو:",
+    "choices": [
+      "زوجي",
+      "فردي"
+    ],
+    "answer_index": 0,
+    "answer": "زوجي",
+    "explanation": "ننظر لآخر رقم.",
+    "id": "G2_odd_even_Q002",
+    "grade": 2,
+    "skill_id": "G2_odd_even"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "العدد الذي ينتهي بـ 5 يكون عادة __",
+    "answer": "فردي",
+    "explanation": "العداد المنتهي بـ5 فردي.",
+    "id": "G2_odd_even_Q003",
+    "grade": 2,
+    "skill_id": "G2_odd_even"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 30 + 21 = ؟",
+    "answer": "51",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G2_add_2digits_no_carry_Q001",
+    "grade": 2,
+    "skill_id": "G2_add_2digits_no_carry"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 30 + 21",
+    "choices": [
+      "51",
+      "52",
+      "50",
+      "61"
+    ],
+    "answer_index": 0,
+    "answer": "51",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G2_add_2digits_no_carry_Q002",
+    "grade": 2,
+    "skill_id": "G2_add_2digits_no_carry"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 30 + __ = 51",
+    "answer": "21",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G2_add_2digits_no_carry_Q003",
+    "grade": 2,
+    "skill_id": "G2_add_2digits_no_carry"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 87 + 60 = ؟",
+    "answer": "147",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G2_add_2digits_with_carry_Q001",
+    "grade": 2,
+    "skill_id": "G2_add_2digits_with_carry"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 87 + 60",
+    "choices": [
+      "147",
+      "148",
+      "146",
+      "157"
+    ],
+    "answer_index": 0,
+    "answer": "147",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G2_add_2digits_with_carry_Q002",
+    "grade": 2,
+    "skill_id": "G2_add_2digits_with_carry"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 87 + __ = 147",
+    "answer": "60",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G2_add_2digits_with_carry_Q003",
+    "grade": 2,
+    "skill_id": "G2_add_2digits_with_carry"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 29 − 11 = ؟",
+    "answer": "18",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G2_sub_2digits_no_borrow_Q001",
+    "grade": 2,
+    "skill_id": "G2_sub_2digits_no_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 29 − 11",
+    "choices": [
+      "18",
+      "19",
+      "17",
+      "28"
+    ],
+    "answer_index": 0,
+    "answer": "18",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G2_sub_2digits_no_borrow_Q002",
+    "grade": 2,
+    "skill_id": "G2_sub_2digits_no_borrow"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 29 − __ = 18",
+    "answer": "11",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G2_sub_2digits_no_borrow_Q003",
+    "grade": 2,
+    "skill_id": "G2_sub_2digits_no_borrow"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 80 − 66 = ؟",
+    "answer": "14",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G2_sub_2digits_with_borrow_Q001",
+    "grade": 2,
+    "skill_id": "G2_sub_2digits_with_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 80 − 66",
+    "choices": [
+      "14",
+      "15",
+      "13",
+      "24"
+    ],
+    "answer_index": 0,
+    "answer": "14",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G2_sub_2digits_with_borrow_Q002",
+    "grade": 2,
+    "skill_id": "G2_sub_2digits_with_borrow"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 80 − __ = 14",
+    "answer": "66",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G2_sub_2digits_with_borrow_Q003",
+    "grade": 2,
+    "skill_id": "G2_sub_2digits_with_borrow"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 529 + 895 = ؟",
+    "answer": "1424",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G2_add_3digits_no_carry_Q001",
+    "grade": 2,
+    "skill_id": "G2_add_3digits_no_carry"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 529 + 895",
+    "choices": [
+      "1424",
+      "1425",
+      "1423",
+      "1434"
+    ],
+    "answer_index": 0,
+    "answer": "1424",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G2_add_3digits_no_carry_Q002",
+    "grade": 2,
+    "skill_id": "G2_add_3digits_no_carry"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 529 + __ = 1424",
+    "answer": "895",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G2_add_3digits_no_carry_Q003",
+    "grade": 2,
+    "skill_id": "G2_add_3digits_no_carry"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 704 + 979 = ؟",
+    "answer": "1683",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G2_add_3digits_with_carry_Q001",
+    "grade": 2,
+    "skill_id": "G2_add_3digits_with_carry"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 704 + 979",
+    "choices": [
+      "1683",
+      "1684",
+      "1682",
+      "1693"
+    ],
+    "answer_index": 0,
+    "answer": "1683",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G2_add_3digits_with_carry_Q002",
+    "grade": 2,
+    "skill_id": "G2_add_3digits_with_carry"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 704 + __ = 1683",
+    "answer": "979",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G2_add_3digits_with_carry_Q003",
+    "grade": 2,
+    "skill_id": "G2_add_3digits_with_carry"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 233 − 119 = ؟",
+    "answer": "114",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G2_sub_3digits_no_borrow_Q001",
+    "grade": 2,
+    "skill_id": "G2_sub_3digits_no_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 233 − 119",
+    "choices": [
+      "114",
+      "115",
+      "113",
+      "124"
+    ],
+    "answer_index": 0,
+    "answer": "114",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G2_sub_3digits_no_borrow_Q002",
+    "grade": 2,
+    "skill_id": "G2_sub_3digits_no_borrow"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 233 − __ = 114",
+    "answer": "119",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G2_sub_3digits_no_borrow_Q003",
+    "grade": 2,
+    "skill_id": "G2_sub_3digits_no_borrow"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 763 − 260 = ؟",
+    "answer": "503",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G2_sub_3digits_with_borrow_Q001",
+    "grade": 2,
+    "skill_id": "G2_sub_3digits_with_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 763 − 260",
+    "choices": [
+      "503",
+      "504",
+      "502",
+      "513"
+    ],
+    "answer_index": 0,
+    "answer": "503",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G2_sub_3digits_with_borrow_Q002",
+    "grade": 2,
+    "skill_id": "G2_sub_3digits_with_borrow"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 763 − __ = 503",
+    "answer": "260",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G2_sub_3digits_with_borrow_Q003",
+    "grade": 2,
+    "skill_id": "G2_sub_3digits_with_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "ما معنى 2 × 3 ؟",
+    "choices": [
+      "2 مكررة 3 مرات",
+      "3 مكررة 2 مرات",
+      "طرح",
+      "قسمة"
+    ],
+    "answer_index": 0,
+    "answer": "2 مكررة 3 مرات",
+    "explanation": "الضرب جمع متكرر.",
+    "id": "G2_mult_concept_Q001",
+    "grade": 2,
+    "skill_id": "G2_mult_concept"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 2 × 3 = ؟",
+    "answer": "6",
+    "explanation": "نستخدم جدول الضرب.",
+    "id": "G2_mult_concept_Q002",
+    "grade": 2,
+    "skill_id": "G2_mult_concept"
+  },
+  {
+    "type": "drag_drop_match",
+    "prompt": "طابقي العملية مع الناتج:",
+    "left_items": [
+      "2×3",
+      "3×2"
+    ],
+    "right_items": [
+      "6"
+    ],
+    "answer": {
+      "2×3": "6",
+      "3×2": "6"
+    },
+    "explanation": "التبديل في الضرب لا يغير الناتج.",
+    "id": "G2_mult_concept_Q003",
+    "grade": 2,
+    "skill_id": "G2_mult_concept"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 4 × 5 = ؟",
+    "answer": "20",
+    "explanation": "استخدمي جدول الضرب.",
+    "id": "G2_mult_facts_2_5_10_Q001",
+    "grade": 2,
+    "skill_id": "G2_mult_facts_2_5_10"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 4 × 5",
+    "choices": [
+      "20",
+      "24",
+      "16",
+      "30"
+    ],
+    "answer_index": 0,
+    "answer": "20",
+    "explanation": "الناتج هو حاصل الضرب.",
+    "id": "G2_mult_facts_2_5_10_Q002",
+    "grade": 2,
+    "skill_id": "G2_mult_facts_2_5_10"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 4 × __ = 20",
+    "answer": "5",
+    "explanation": "المجهول هو العامل الثاني.",
+    "id": "G2_mult_facts_2_5_10_Q003",
+    "grade": 2,
+    "skill_id": "G2_mult_facts_2_5_10"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "القسمة تعني:",
+    "choices": [
+      "توزيع بالتساوي",
+      "جمع",
+      "طرح",
+      "قياس الزوايا"
+    ],
+    "answer_index": 0,
+    "answer": "توزيع بالتساوي",
+    "explanation": "القسمة توزيع بالتساوي.",
+    "id": "G2_div_concept_Q001",
+    "grade": 2,
+    "skill_id": "G2_div_concept"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 18 ÷ 9 = ؟",
+    "answer": "2",
+    "explanation": "نبحث عن عدد إذا ضربناه يعطي المقسوم.",
+    "id": "G2_div_concept_Q002",
+    "grade": 2,
+    "skill_id": "G2_div_concept"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 2 × 9 = __",
+    "answer": "18",
+    "explanation": "نتحقق بالضرب.",
+    "id": "G2_div_concept_Q003",
+    "grade": 2,
+    "skill_id": "G2_div_concept"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي كسر يمثل (نصف)؟",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/4",
+      "2/3"
+    ],
+    "answer_index": 0,
+    "answer": "1/2",
+    "explanation": "النصف = 1/2.",
+    "id": "G2_fractions_basic_Q001",
+    "grade": 2,
+    "skill_id": "G2_fractions_basic"
+  },
+  {
+    "type": "drag_drop_match",
+    "prompt": "طابقي الكسر مع اسمه:",
+    "left_items": [
+      "1/2",
+      "1/3",
+      "1/4"
+    ],
+    "right_items": [
+      "نصف",
+      "ثلث",
+      "ربع"
+    ],
+    "answer": {
+      "1/2": "نصف",
+      "1/3": "ثلث",
+      "1/4": "ربع"
+    },
+    "explanation": "نقرأ المقام.",
+    "id": "G2_fractions_basic_Q002",
+    "grade": 2,
+    "skill_id": "G2_fractions_basic"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "اكتبي الكسر: ربع = __",
+    "answer": "1/4",
+    "explanation": "الربع يكتب 1/4.",
+    "id": "G2_fractions_basic_Q003",
+    "grade": 2,
+    "skill_id": "G2_fractions_basic"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "إذا كانت الساعة 3:00 فهذا يعني:",
+    "choices": [
+      "الثالثة تمامًا",
+      "الثالثة ونصف",
+      "الرابعة تمامًا",
+      "الثانية تمامًا"
+    ],
+    "answer_index": 0,
+    "answer": "الثالثة تمامًا",
+    "explanation": ":00 يعني تمامًا.",
+    "id": "G2_time_read_clock_Q001",
+    "grade": 2,
+    "skill_id": "G2_time_read_clock"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "إذا كانت الساعة 7:30 فهذا يعني:",
+    "choices": [
+      "السابعة ونصف",
+      "السابعة تمامًا",
+      "الثامنة إلا ربع",
+      "السادسة ونصف"
+    ],
+    "answer_index": 0,
+    "answer": "السابعة ونصف",
+    "explanation": ":30 يعني نصف ساعة.",
+    "id": "G2_time_read_clock_Q002",
+    "grade": 2,
+    "skill_id": "G2_time_read_clock"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 5:00 تُقرأ __",
+    "answer": "الخامسة تمامًا",
+    "explanation": "نقرأ الساعة.",
+    "id": "G2_time_read_clock_Q003",
+    "grade": 2,
+    "skill_id": "G2_time_read_clock"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "في جدول: تفاح=3، موز=5. أيهما أكثر؟",
+    "choices": [
+      "تفاح",
+      "موز"
+    ],
+    "answer_index": 1,
+    "answer": "موز",
+    "explanation": "5 أكبر من 3.",
+    "id": "G2_data_simple_Q001",
+    "grade": 2,
+    "skill_id": "G2_data_simple"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "عدد الكرات الحمراء 4 والزرقاء 1، المجموع = __",
+    "answer": "5",
+    "explanation": "4+1=5.",
+    "id": "G2_data_simple_Q002",
+    "grade": 2,
+    "skill_id": "G2_data_simple"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "إذا كانت القيم: 2،2،4. أكبر قيمة هي:",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "1"
+    ],
+    "answer_index": 1,
+    "answer": "4",
+    "explanation": "الأكبر هو 4.",
+    "id": "G2_data_simple_Q003",
+    "grade": 2,
+    "skill_id": "G2_data_simple"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد أكبر؟",
+    "choices": [
+      "2946",
+      "2996",
+      "2945",
+      "2995"
+    ],
+    "answer_index": 1,
+    "answer": "2996",
+    "explanation": "نقارن المنازل من اليسار.",
+    "id": "G3_place_value_9999_Q001",
+    "grade": 3,
+    "skill_id": "G3_place_value_9999"
+  },
+  {
+    "type": "drag_drop_sort",
+    "prompt": "رتّبي الأعداد من الأصغر إلى الأكبر:",
+    "items": [
+      "2946",
+      "2996",
+      "2948"
+    ],
+    "answer": [
+      "2946",
+      "2948",
+      "2996"
+    ],
+    "explanation": "نرتب حسب القيمة.",
+    "id": "G3_place_value_9999_Q002",
+    "grade": 3,
+    "skill_id": "G3_place_value_9999"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 2946، 2947، __ ، 2949",
+    "answer": "2948",
+    "explanation": "يزيد العدد واحدًا كل مرة.",
+    "id": "G3_place_value_9999_Q003",
+    "grade": 3,
+    "skill_id": "G3_place_value_9999"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "قربي 34 لأقرب عشرة:",
+    "choices": [
+      "30",
+      "40",
+      "34",
+      "35"
+    ],
+    "answer_index": 0,
+    "answer": "30",
+    "explanation": "4 أقل من 5 فننزل.",
+    "id": "G3_rounding_Q001",
+    "grade": 3,
+    "skill_id": "G3_rounding"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "قربي 57 لأقرب عشرة:",
+    "choices": [
+      "60",
+      "50",
+      "57",
+      "70"
+    ],
+    "answer_index": 0,
+    "answer": "60",
+    "explanation": "7 >=5 فنرفع.",
+    "id": "G3_rounding_Q002",
+    "grade": 3,
+    "skill_id": "G3_rounding"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "إذا كان رقم الآحاد 5 أو أكثر نُقرب إلى __",
+    "answer": "الأعلى",
+    "explanation": "نرفع.",
+    "id": "G3_rounding_Q003",
+    "grade": 3,
+    "skill_id": "G3_rounding"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 7946 + 5690 = ؟",
+    "answer": "13636",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G3_add_4digits_no_carry_Q001",
+    "grade": 3,
+    "skill_id": "G3_add_4digits_no_carry"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 7946 + 5690",
+    "choices": [
+      "13636",
+      "13637",
+      "13635",
+      "13646"
+    ],
+    "answer_index": 0,
+    "answer": "13636",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G3_add_4digits_no_carry_Q002",
+    "grade": 3,
+    "skill_id": "G3_add_4digits_no_carry"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 7946 + __ = 13636",
+    "answer": "5690",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G3_add_4digits_no_carry_Q003",
+    "grade": 3,
+    "skill_id": "G3_add_4digits_no_carry"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 3947 + 2298 = ؟",
+    "answer": "6245",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G3_add_4digits_with_carry_Q001",
+    "grade": 3,
+    "skill_id": "G3_add_4digits_with_carry"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 3947 + 2298",
+    "choices": [
+      "6245",
+      "6246",
+      "6244",
+      "6255"
+    ],
+    "answer_index": 0,
+    "answer": "6245",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G3_add_4digits_with_carry_Q002",
+    "grade": 3,
+    "skill_id": "G3_add_4digits_with_carry"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 3947 + __ = 6245",
+    "answer": "2298",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G3_add_4digits_with_carry_Q003",
+    "grade": 3,
+    "skill_id": "G3_add_4digits_with_carry"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 4311 − 2200 = ؟",
+    "answer": "2111",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G3_sub_4digits_no_borrow_Q001",
+    "grade": 3,
+    "skill_id": "G3_sub_4digits_no_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 4311 − 2200",
+    "choices": [
+      "2111",
+      "2112",
+      "2110",
+      "2121"
+    ],
+    "answer_index": 0,
+    "answer": "2111",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G3_sub_4digits_no_borrow_Q002",
+    "grade": 3,
+    "skill_id": "G3_sub_4digits_no_borrow"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 4311 − __ = 2111",
+    "answer": "2200",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G3_sub_4digits_no_borrow_Q003",
+    "grade": 3,
+    "skill_id": "G3_sub_4digits_no_borrow"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 3346 − 2156 = ؟",
+    "answer": "1190",
+    "explanation": "نطرح من الأكبر للأصغر.",
+    "id": "G3_sub_4digits_with_borrow_Q001",
+    "grade": 3,
+    "skill_id": "G3_sub_4digits_with_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 3346 − 2156",
+    "choices": [
+      "1190",
+      "1191",
+      "1189",
+      "1200"
+    ],
+    "answer_index": 0,
+    "answer": "1190",
+    "explanation": "الناتج هو الفرق.",
+    "id": "G3_sub_4digits_with_borrow_Q002",
+    "grade": 3,
+    "skill_id": "G3_sub_4digits_with_borrow"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 3346 − __ = 1190",
+    "answer": "2156",
+    "explanation": "المجهول هو المطروح.",
+    "id": "G3_sub_4digits_with_borrow_Q003",
+    "grade": 3,
+    "skill_id": "G3_sub_4digits_with_borrow"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الزاوية القائمة قياسها:",
+    "choices": [
+      "90°",
+      "45°",
+      "180°",
+      "30°"
+    ],
+    "answer_index": 0,
+    "answer": "90°",
+    "explanation": "القائمة = 90 درجة.",
+    "id": "G3_geometry_angles_Q001",
+    "grade": 3,
+    "skill_id": "G3_geometry_angles"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي نوع زاوية أكبر من 90° وأقل من 180°؟",
+    "choices": [
+      "حادة",
+      "قائمة",
+      "منفرجة",
+      "صفرية"
+    ],
+    "answer_index": 2,
+    "answer": "منفرجة",
+    "explanation": "المنفرجة بين 90 و180.",
+    "id": "G3_geometry_angles_Q002",
+    "grade": 3,
+    "skill_id": "G3_geometry_angles"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "الزاوية الحادة قياسها أقل من __",
+    "answer": "90",
+    "explanation": "الحادة أقل من 90.",
+    "id": "G3_geometry_angles_Q003",
+    "grade": 3,
+    "skill_id": "G3_geometry_angles"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الشكل الذي له 3 أضلاع هو:",
+    "choices": [
+      "مثلث",
+      "مربع",
+      "دائرة",
+      "مستطيل"
+    ],
+    "answer_index": 0,
+    "answer": "مثلث",
+    "explanation": "المثلث له ثلاثة أضلاع.",
+    "id": "G3_shapes_rect_square_triangle_Q001",
+    "grade": 3,
+    "skill_id": "G3_shapes_rect_square_triangle"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الخطّان المتوازيان:",
+    "choices": [
+      "لا يلتقيان",
+      "يلتقيان دائمًا",
+      "لهما نفس نقطة البداية",
+      "لا يمكن رسمهما"
+    ],
+    "answer_index": 0,
+    "answer": "لا يلتقيان",
+    "explanation": "المتوازيان لا يلتقيان.",
+    "id": "G3_shapes_rect_square_triangle_Q002",
+    "grade": 3,
+    "skill_id": "G3_shapes_rect_square_triangle"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "الشكل الذي له 4 أضلاع متساوية هو __",
+    "answer": "مربع",
+    "explanation": "المربع أربعة أضلاع متساوية.",
+    "id": "G3_shapes_rect_square_triangle_Q003",
+    "grade": 3,
+    "skill_id": "G3_shapes_rect_square_triangle"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "في جدول: تفاح=3، موز=5. أيهما أكثر؟",
+    "choices": [
+      "تفاح",
+      "موز"
+    ],
+    "answer_index": 1,
+    "answer": "موز",
+    "explanation": "5 أكبر من 3.",
+    "id": "G3_data_representation_Q001",
+    "grade": 3,
+    "skill_id": "G3_data_representation"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "عدد الكرات الحمراء 4 والزرقاء 1، المجموع = __",
+    "answer": "5",
+    "explanation": "4+1=5.",
+    "id": "G3_data_representation_Q002",
+    "grade": 3,
+    "skill_id": "G3_data_representation"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "إذا كانت القيم: 2،2،4. أكبر قيمة هي:",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "1"
+    ],
+    "answer_index": 1,
+    "answer": "4",
+    "explanation": "الأكبر هو 4.",
+    "id": "G3_data_representation_Q003",
+    "grade": 3,
+    "skill_id": "G3_data_representation"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 99725 + 70558 = ؟",
+    "answer": "170283",
+    "explanation": "نجمع خطوة خطوة.",
+    "id": "G3_add_sub_99999_Q001",
+    "grade": 3,
+    "skill_id": "G3_add_sub_99999"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 99725 + 70558",
+    "choices": [
+      "170283",
+      "170284",
+      "170282",
+      "170293"
+    ],
+    "answer_index": 0,
+    "answer": "170283",
+    "explanation": "الناتج هو مجموع العددين.",
+    "id": "G3_add_sub_99999_Q002",
+    "grade": 3,
+    "skill_id": "G3_add_sub_99999"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 99725 + __ = 170283",
+    "answer": "70558",
+    "explanation": "المجهول هو العدد الثاني.",
+    "id": "G3_add_sub_99999_Q003",
+    "grade": 3,
+    "skill_id": "G3_add_sub_99999"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 9 × 2 = ؟",
+    "answer": "18",
+    "explanation": "استخدمي جدول الضرب.",
+    "id": "G3_mult_facts_to_9_Q001",
+    "grade": 3,
+    "skill_id": "G3_mult_facts_to_9"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 9 × 2",
+    "choices": [
+      "18",
+      "27",
+      "9",
+      "28"
+    ],
+    "answer_index": 0,
+    "answer": "18",
+    "explanation": "الناتج هو حاصل الضرب.",
+    "id": "G3_mult_facts_to_9_Q002",
+    "grade": 3,
+    "skill_id": "G3_mult_facts_to_9"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 9 × __ = 18",
+    "answer": "2",
+    "explanation": "المجهول هو العامل الثاني.",
+    "id": "G3_mult_facts_to_9_Q003",
+    "grade": 3,
+    "skill_id": "G3_mult_facts_to_9"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "القسمة تعني:",
+    "choices": [
+      "توزيع بالتساوي",
+      "جمع",
+      "طرح",
+      "قياس الزوايا"
+    ],
+    "answer_index": 0,
+    "answer": "توزيع بالتساوي",
+    "explanation": "القسمة توزيع بالتساوي.",
+    "id": "G3_div_basic_Q001",
+    "grade": 3,
+    "skill_id": "G3_div_basic"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 36 ÷ 9 = ؟",
+    "answer": "4",
+    "explanation": "نبحث عن عدد إذا ضربناه يعطي المقسوم.",
+    "id": "G3_div_basic_Q002",
+    "grade": 3,
+    "skill_id": "G3_div_basic"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 4 × 9 = __",
+    "answer": "36",
+    "explanation": "نتحقق بالضرب.",
+    "id": "G3_div_basic_Q003",
+    "grade": 3,
+    "skill_id": "G3_div_basic"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي كسر يساوي 1/2 ؟",
+    "choices": [
+      "2/4",
+      "1/3",
+      "3/4",
+      "2/3"
+    ],
+    "answer_index": 0,
+    "answer": "2/4",
+    "explanation": "نضرب البسط والمقام بنفس العدد.",
+    "id": "G3_fractions_equivalent_Q001",
+    "grade": 3,
+    "skill_id": "G3_fractions_equivalent"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 1/2 = __/4",
+    "answer": "2",
+    "explanation": "نضرب ×2.",
+    "id": "G3_fractions_equivalent_Q002",
+    "grade": 3,
+    "skill_id": "G3_fractions_equivalent"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الكسر المكافئ لـ 2/3:",
+    "choices": [
+      "4/6",
+      "3/6",
+      "2/6",
+      "6/4"
+    ],
+    "answer_index": 0,
+    "answer": "4/6",
+    "explanation": "نضرب ×2.",
+    "id": "G3_fractions_equivalent_Q003",
+    "grade": 3,
+    "skill_id": "G3_fractions_equivalent"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الإشارة الصحيحة: 863 __ 932",
+    "choices": [
+      "<",
+      ">",
+      "="
+    ],
+    "answer_index": 0,
+    "answer": "<",
+    "explanation": "الأكبر يأخذ علامة > والأصغر <.",
+    "id": "G3_fractions_compare_Q001",
+    "grade": 3,
+    "skill_id": "G3_fractions_compare"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد أصغر؟",
+    "choices": [
+      "863",
+      "932",
+      "863",
+      "932"
+    ],
+    "answer_index": 0,
+    "answer": "863",
+    "explanation": "الأصغر هو الأقل قيمة.",
+    "id": "G3_fractions_compare_Q002",
+    "grade": 3,
+    "skill_id": "G3_fractions_compare"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "إذا كان 932 أكبر من 863 نكتب الإشارة __",
+    "answer": ">",
+    "explanation": "علامة أكبر من هي >.",
+    "id": "G3_fractions_compare_Q003",
+    "grade": 3,
+    "skill_id": "G3_fractions_compare"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي وحدة نستخدم لقياس الطول؟",
+    "choices": [
+      "متر",
+      "لتر",
+      "كيلوغرام",
+      "درجة"
+    ],
+    "answer_index": 0,
+    "answer": "متر",
+    "explanation": "المتر للطول.",
+    "id": "G3_measurement_length_mass_time_Q001",
+    "grade": 3,
+    "skill_id": "G3_measurement_length_mass_time"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "1000 غرام يساوي:",
+    "choices": [
+      "1 كغ",
+      "10 كغ",
+      "100 كغ",
+      "0.1 كغ"
+    ],
+    "answer_index": 0,
+    "answer": "1 كغ",
+    "explanation": "1000 غرام = 1 كغ.",
+    "id": "G3_measurement_length_mass_time_Q002",
+    "grade": 3,
+    "skill_id": "G3_measurement_length_mass_time"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "1 متر = __ سنتيمتر",
+    "answer": "100",
+    "explanation": "المتر 100 سم.",
+    "id": "G3_measurement_length_mass_time_Q003",
+    "grade": 3,
+    "skill_id": "G3_measurement_length_mass_time"
+  },
+  {
+    "type": "input_number",
+    "prompt": "مستطيل طوله 4 وعرضه 3. المحيط = ؟",
+    "answer": "14",
+    "explanation": "المحيط = 2×(الطول+العرض).",
+    "id": "G3_perimeter_area_Q001",
+    "grade": 3,
+    "skill_id": "G3_perimeter_area"
+  },
+  {
+    "type": "input_number",
+    "prompt": "مستطيل طوله 4 وعرضه 3. المساحة = ؟",
+    "answer": "12",
+    "explanation": "المساحة = الطول×العرض.",
+    "id": "G3_perimeter_area_Q002",
+    "grade": 3,
+    "skill_id": "G3_perimeter_area"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "المحيط يعني:",
+    "choices": [
+      "طول الحدود حول الشكل",
+      "المساحة داخل الشكل",
+      "عدد الزوايا",
+      "اللون"
+    ],
+    "answer_index": 0,
+    "answer": "طول الحدود حول الشكل",
+    "explanation": "المحيط هو طول الحدود.",
+    "id": "G3_perimeter_area_Q003",
+    "grade": 3,
+    "skill_id": "G3_perimeter_area"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد أكبر؟",
+    "choices": [
+      "5347",
+      "5364",
+      "5346",
+      "5363"
+    ],
+    "answer_index": 1,
+    "answer": "5364",
+    "explanation": "نقارن المنازل من اليسار.",
+    "id": "G4_large_numbers_999999_Q001",
+    "grade": 4,
+    "skill_id": "G4_large_numbers_999999"
+  },
+  {
+    "type": "drag_drop_sort",
+    "prompt": "رتّبي الأعداد من الأصغر إلى الأكبر:",
+    "items": [
+      "5347",
+      "5364",
+      "5349"
+    ],
+    "answer": [
+      "5347",
+      "5349",
+      "5364"
+    ],
+    "explanation": "نرتب حسب القيمة.",
+    "id": "G4_large_numbers_999999_Q002",
+    "grade": 4,
+    "skill_id": "G4_large_numbers_999999"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 5347، 5348، __ ، 5350",
+    "answer": "5349",
+    "explanation": "يزيد العدد واحدًا كل مرة.",
+    "id": "G4_large_numbers_999999_Q003",
+    "grade": 4,
+    "skill_id": "G4_large_numbers_999999"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 2 × 616 = ؟",
+    "answer": "1232",
+    "explanation": "استخدمي جدول الضرب.",
+    "id": "G4_mult_1digit_by_2_3digits_Q001",
+    "grade": 4,
+    "skill_id": "G4_mult_1digit_by_2_3digits"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 2 × 616",
+    "choices": [
+      "1232",
+      "1234",
+      "1230",
+      "1242"
+    ],
+    "answer_index": 0,
+    "answer": "1232",
+    "explanation": "الناتج هو حاصل الضرب.",
+    "id": "G4_mult_1digit_by_2_3digits_Q002",
+    "grade": 4,
+    "skill_id": "G4_mult_1digit_by_2_3digits"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 2 × __ = 1232",
+    "answer": "616",
+    "explanation": "المجهول هو العامل الثاني.",
+    "id": "G4_mult_1digit_by_2_3digits_Q003",
+    "grade": 4,
+    "skill_id": "G4_mult_1digit_by_2_3digits"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "القسمة تعني:",
+    "choices": [
+      "توزيع بالتساوي",
+      "جمع",
+      "طرح",
+      "قياس الزوايا"
+    ],
+    "answer_index": 0,
+    "answer": "توزيع بالتساوي",
+    "explanation": "القسمة توزيع بالتساوي.",
+    "id": "G4_div_2digits_by_1digit_Q001",
+    "grade": 4,
+    "skill_id": "G4_div_2digits_by_1digit"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 144 ÷ 8 = ؟",
+    "answer": "18",
+    "explanation": "نبحث عن عدد إذا ضربناه يعطي المقسوم.",
+    "id": "G4_div_2digits_by_1digit_Q002",
+    "grade": 4,
+    "skill_id": "G4_div_2digits_by_1digit"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 18 × 8 = __",
+    "answer": "144",
+    "explanation": "نتحقق بالضرب.",
+    "id": "G4_div_2digits_by_1digit_Q003",
+    "grade": 4,
+    "skill_id": "G4_div_2digits_by_1digit"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 2/6 + 3/6 = __/6",
+    "answer": "5",
+    "explanation": "نجمع البسطين والمقام ثابت.",
+    "id": "G4_fractions_add_sub_Q001",
+    "grade": 4,
+    "skill_id": "G4_fractions_add_sub"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "2/6 + 3/6 = ؟",
+    "choices": [
+      "5/6",
+      "5/7",
+      "2/6",
+      "3/6"
+    ],
+    "answer_index": 0,
+    "answer": "5/6",
+    "explanation": "نفس المقام.",
+    "id": "G4_fractions_add_sub_Q002",
+    "grade": 4,
+    "skill_id": "G4_fractions_add_sub"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 5/6 − 2/6 = __/6",
+    "answer": "3",
+    "explanation": "نطرح البسط.",
+    "id": "G4_fractions_add_sub_Q003",
+    "grade": 4,
+    "skill_id": "G4_fractions_add_sub"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الشكل الذي له 3 أضلاع هو:",
+    "choices": [
+      "مثلث",
+      "مربع",
+      "دائرة",
+      "مستطيل"
+    ],
+    "answer_index": 0,
+    "answer": "مثلث",
+    "explanation": "المثلث له ثلاثة أضلاع.",
+    "id": "G4_lines_parallel_perp_Q001",
+    "grade": 4,
+    "skill_id": "G4_lines_parallel_perp"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الخطّان المتوازيان:",
+    "choices": [
+      "لا يلتقيان",
+      "يلتقيان دائمًا",
+      "لهما نفس نقطة البداية",
+      "لا يمكن رسمهما"
+    ],
+    "answer_index": 0,
+    "answer": "لا يلتقيان",
+    "explanation": "المتوازيان لا يلتقيان.",
+    "id": "G4_lines_parallel_perp_Q002",
+    "grade": 4,
+    "skill_id": "G4_lines_parallel_perp"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "الشكل الذي له 4 أضلاع متساوية هو __",
+    "answer": "مربع",
+    "explanation": "المربع أربعة أضلاع متساوية.",
+    "id": "G4_lines_parallel_perp_Q003",
+    "grade": 4,
+    "skill_id": "G4_lines_parallel_perp"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "الزاوية القائمة قياسها:",
+    "choices": [
+      "90°",
+      "45°",
+      "180°",
+      "30°"
+    ],
+    "answer_index": 0,
+    "answer": "90°",
+    "explanation": "القائمة = 90 درجة.",
+    "id": "G4_angles_triangle_Q001",
+    "grade": 4,
+    "skill_id": "G4_angles_triangle"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي نوع زاوية أكبر من 90° وأقل من 180°؟",
+    "choices": [
+      "حادة",
+      "قائمة",
+      "منفرجة",
+      "صفرية"
+    ],
+    "answer_index": 2,
+    "answer": "منفرجة",
+    "explanation": "المنفرجة بين 90 و180.",
+    "id": "G4_angles_triangle_Q002",
+    "grade": 4,
+    "skill_id": "G4_angles_triangle"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "الزاوية الحادة قياسها أقل من __",
+    "answer": "90",
+    "explanation": "الحادة أقل من 90.",
+    "id": "G4_angles_triangle_Q003",
+    "grade": 4,
+    "skill_id": "G4_angles_triangle"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "في جدول: تفاح=3، موز=5. أيهما أكثر؟",
+    "choices": [
+      "تفاح",
+      "موز"
+    ],
+    "answer_index": 1,
+    "answer": "موز",
+    "explanation": "5 أكبر من 3.",
+    "id": "G4_data_tables_bars_Q001",
+    "grade": 4,
+    "skill_id": "G4_data_tables_bars"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "عدد الكرات الحمراء 4 والزرقاء 1، المجموع = __",
+    "answer": "5",
+    "explanation": "4+1=5.",
+    "id": "G4_data_tables_bars_Q002",
+    "grade": 4,
+    "skill_id": "G4_data_tables_bars"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "إذا كانت القيم: 2،2،4. أكبر قيمة هي:",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "1"
+    ],
+    "answer_index": 1,
+    "answer": "4",
+    "explanation": "الأكبر هو 4.",
+    "id": "G4_data_tables_bars_Q003",
+    "grade": 4,
+    "skill_id": "G4_data_tables_bars"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد من مضاعفات 4؟",
+    "choices": [
+      "12",
+      "14",
+      "15",
+      "17"
+    ],
+    "answer_index": 0,
+    "answer": "12",
+    "explanation": "12 = 4×3.",
+    "id": "G4_multiples_Q001",
+    "grade": 4,
+    "skill_id": "G4_multiples"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد من مضاعفات 3؟",
+    "choices": [
+      "21",
+      "22",
+      "25",
+      "28"
+    ],
+    "answer_index": 0,
+    "answer": "21",
+    "explanation": "21 = 3×7.",
+    "id": "G4_multiples_Q002",
+    "grade": 4,
+    "skill_id": "G4_multiples"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "مضاعفات 5 تنتهي بـ __ أو __",
+    "answer": "0 أو 5",
+    "explanation": "",
+    "id": "G4_multiples_Q003",
+    "grade": 4,
+    "skill_id": "G4_multiples"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "العدد الذي يقبل القسمة على 2 ينتهي بـ:",
+    "choices": [
+      "0,2,4,6,8",
+      "1,3,5,7,9",
+      "أي رقم",
+      "9 فقط"
+    ],
+    "answer_index": 0,
+    "answer": "0,2,4,6,8",
+    "explanation": "",
+    "id": "G4_divisibility_2_3_5_6_Q001",
+    "grade": 4,
+    "skill_id": "G4_divisibility_2_3_5_6"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "العدد الذي يقبل القسمة على 5 ينتهي بـ:",
+    "choices": [
+      "0 أو 5",
+      "0 أو 2",
+      "1 أو 3",
+      "6 أو 8"
+    ],
+    "answer_index": 0,
+    "answer": "0 أو 5",
+    "explanation": "",
+    "id": "G4_divisibility_2_3_5_6_Q002",
+    "grade": 4,
+    "skill_id": "G4_divisibility_2_3_5_6"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "قاعدة القسمة على 3: مجموع الأرقام يكون:",
+    "choices": [
+      "من مضاعفات 3",
+      "عددًا أوليًا",
+      ">10 دائمًا",
+      "0 فقط"
+    ],
+    "answer_index": 0,
+    "answer": "من مضاعفات 3",
+    "explanation": "",
+    "id": "G4_divisibility_2_3_5_6_Q003",
+    "grade": 4,
+    "skill_id": "G4_divisibility_2_3_5_6"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 72 × 71 = ؟",
+    "answer": "5112",
+    "explanation": "استخدمي جدول الضرب.",
+    "id": "G4_mult_2by2_3by2_Q001",
+    "grade": 4,
+    "skill_id": "G4_mult_2by2_3by2"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "اختاري الناتج الصحيح: 72 × 71",
+    "choices": [
+      "5112",
+      "5184",
+      "5040",
+      "5122"
+    ],
+    "answer_index": 0,
+    "answer": "5112",
+    "explanation": "الناتج هو حاصل الضرب.",
+    "id": "G4_mult_2by2_3by2_Q002",
+    "grade": 4,
+    "skill_id": "G4_mult_2by2_3by2"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 72 × __ = 5112",
+    "answer": "71",
+    "explanation": "المجهول هو العامل الثاني.",
+    "id": "G4_mult_2by2_3by2_Q003",
+    "grade": 4,
+    "skill_id": "G4_mult_2by2_3by2"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "القسمة تعني:",
+    "choices": [
+      "توزيع بالتساوي",
+      "جمع",
+      "طرح",
+      "قياس الزوايا"
+    ],
+    "answer_index": 0,
+    "answer": "توزيع بالتساوي",
+    "explanation": "القسمة توزيع بالتساوي.",
+    "id": "G4_div_2by2_3by2_Q001",
+    "grade": 4,
+    "skill_id": "G4_div_2by2_3by2"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 30 ÷ 15 = ؟",
+    "answer": "2",
+    "explanation": "نبحث عن عدد إذا ضربناه يعطي المقسوم.",
+    "id": "G4_div_2by2_3by2_Q002",
+    "grade": 4,
+    "skill_id": "G4_div_2by2_3by2"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 2 × 15 = __",
+    "answer": "30",
+    "explanation": "نتحقق بالضرب.",
+    "id": "G4_div_2by2_3by2_Q003",
+    "grade": 4,
+    "skill_id": "G4_div_2by2_3by2"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "أكملي: 1.5 + 0.5 = __",
+    "answer": "2.0",
+    "explanation": "نصف + نصف = واحد.",
+    "id": "G4_decimals_add_sub_Q001",
+    "grade": 4,
+    "skill_id": "G4_decimals_add_sub"
+  },
+  {
+    "type": "input_number",
+    "prompt": "احسبي: 2.3 + 1.2 = ؟",
+    "answer": "3.5",
+    "explanation": "نجمع مع ترتيب الفاصلة.",
+    "id": "G4_decimals_add_sub_Q002",
+    "grade": 4,
+    "skill_id": "G4_decimals_add_sub"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي عدد أكبر؟",
+    "choices": [
+      "2.3",
+      "2.03",
+      "2.13",
+      "2.30"
+    ],
+    "answer_index": 0,
+    "answer": "2.3",
+    "explanation": "2.30 = 2.3.",
+    "id": "G4_decimals_add_sub_Q003",
+    "grade": 4,
+    "skill_id": "G4_decimals_add_sub"
+  },
+  {
+    "type": "input_number",
+    "prompt": "مربع طول ضلعه 6. المحيط = ؟",
+    "answer": "24",
+    "explanation": "محيط المربع = 4×الضلع.",
+    "id": "G4_perimeter_rectangle_square_Q001",
+    "grade": 4,
+    "skill_id": "G4_perimeter_rectangle_square"
+  },
+  {
+    "type": "input_number",
+    "prompt": "مستطيل طوله 8 وعرضه 2. المحيط = ؟",
+    "answer": "20",
+    "explanation": "2×(8+2)=20",
+    "id": "G4_perimeter_rectangle_square_Q002",
+    "grade": 4,
+    "skill_id": "G4_perimeter_rectangle_square"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "محيط المربع = __ × طول الضلع",
+    "answer": "4",
+    "explanation": "أربعة أضلاع.",
+    "id": "G4_perimeter_rectangle_square_Q003",
+    "grade": 4,
+    "skill_id": "G4_perimeter_rectangle_square"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "أي وحدة نستخدم لقياس الطول؟",
+    "choices": [
+      "متر",
+      "لتر",
+      "كيلوغرام",
+      "درجة"
+    ],
+    "answer_index": 0,
+    "answer": "متر",
+    "explanation": "المتر للطول.",
+    "id": "G4_unit_conversion_Q001",
+    "grade": 4,
+    "skill_id": "G4_unit_conversion"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "1000 غرام يساوي:",
+    "choices": [
+      "1 كغ",
+      "10 كغ",
+      "100 كغ",
+      "0.1 كغ"
+    ],
+    "answer_index": 0,
+    "answer": "1 كغ",
+    "explanation": "1000 غرام = 1 كغ.",
+    "id": "G4_unit_conversion_Q002",
+    "grade": 4,
+    "skill_id": "G4_unit_conversion"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "1 متر = __ سنتيمتر",
+    "answer": "100",
+    "explanation": "المتر 100 سم.",
+    "id": "G4_unit_conversion_Q003",
+    "grade": 4,
+    "skill_id": "G4_unit_conversion"
+  },
+  {
+    "type": "input_number",
+    "prompt": "متوازي مستطيلات: 3×2×4. الحجم = ؟",
+    "answer": "24",
+    "explanation": "الحجم = الطول×العرض×الارتفاع.",
+    "id": "G4_volume_rect_prism_Q001",
+    "grade": 4,
+    "skill_id": "G4_volume_rect_prism"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "وحدة قياس الحجم قد تكون:",
+    "choices": [
+      "سم³",
+      "سم",
+      "كغ",
+      "لتر فقط"
+    ],
+    "answer_index": 0,
+    "answer": "سم³",
+    "explanation": "الحجم يقاس بوحدات مكعبة.",
+    "id": "G4_volume_rect_prism_Q002",
+    "grade": 4,
+    "skill_id": "G4_volume_rect_prism"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "الحجم = الطول × العرض × __",
+    "answer": "الارتفاع",
+    "explanation": "نضرب الأبعاد الثلاثة.",
+    "id": "G4_volume_rect_prism_Q003",
+    "grade": 4,
+    "skill_id": "G4_volume_rect_prism"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "في كيس: 3 حمراء و1 زرقاء. أي احتمال أكبر؟",
+    "choices": [
+      "أحمر",
+      "أزرق"
+    ],
+    "answer_index": 0,
+    "answer": "أحمر",
+    "explanation": "",
+    "id": "G4_probability_basic_Q001",
+    "grade": 4,
+    "skill_id": "G4_probability_basic"
+  },
+  {
+    "type": "multiple_choice",
+    "prompt": "عند رمي نرد، احتمال ظهور 7 هو:",
+    "choices": [
+      "مستحيل",
+      "مؤكد",
+      "ممكن",
+      "أحيانًا"
+    ],
+    "answer_index": 0,
+    "answer": "مستحيل",
+    "explanation": "",
+    "id": "G4_probability_basic_Q002",
+    "grade": 4,
+    "skill_id": "G4_probability_basic"
+  },
+  {
+    "type": "fill_blank",
+    "prompt": "إذا كان الحدث مؤكدًا: احتمال = __",
+    "answer": "1",
+    "explanation": "",
+    "id": "G4_probability_basic_Q003",
+    "grade": 4,
+    "skill_id": "G4_probability_basic"
+  }
+]

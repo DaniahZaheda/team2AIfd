@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عالم الرياضيات السحري - الصف الرابع</title>
+    <link rel="stylesheet" href="games.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+<!-- المؤثرات المرئية -->
+<div id="floating-numbers"></div>
+<div id="floating-shapes"></div>
+<div id="mouse-trail"></div>
+
+<!-- شاشة البداية -->
+<div id="start-screen" class="screen active">
+    <div class="start-container animate__animated animate__fadeIn">
+
+        <!-- العنوان الرئيسي -->
+        <h1 class="game-title animate__animated animate__zoomIn">
+            <span class="title-word">عالم</span>
+            <span class="title-word highlight">الرياضيات</span>
+            <span class="title-word">السحري</span>
+        </h1>
+
+        <!-- الشخصيات المتحركة -->
+        <div class="character-scene animate__animated animate__fadeInUp">
+            <div class="hero-character" id="math-hero">
+                <div class="character-avatar">
+                    <i class="fas fa-child"></i>
+                </div>
+                <div class="character-name">الطالب الذكي</div>
+                <div class="character-bubble">
+                    <p>هيا نتعلم الرياضيات بطريقة ممتعة!</p>
+                </div>
+            </div>
+
+            <div class="villain-character" id="math-villain">
+                <div class="character-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="character-name">وحش الأرقام</div>
+                <div class="character-bubble">
+                    <p>تحداني إن كنت تستطيع حل مسائلي!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- اختيار الوضع -->
+        <div class="mode-selection animate__animated animate__fadeInUp">
+
+
+            <div class="mode-cards">
+                <!-- وضع التقييم -->
+                <div class="mode-card assessment-mode" data-mode="assessment">
+                    <div class="mode-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="mode-content">
+                        <h3>تقييم المستوى</h3>
+                        <p>اختبر مستواك واحصل على خطة تعليمية مخصصة</p>
+                        <ul class="mode-features">
+                            <li><i class="fas fa-check"></i> اختبار ذكي</li>
+                            <li><i class="fas fa-check"></i> تحليل مفصل</li>
+                            <li><i class="fas fa-check"></i> توصيات مخصصة</li>
+                        </ul>
+                    </div>
+                    <button class="mode-select-btn" data-mode="assessment">
+                        <i class="fas fa-play"></i> ابدأ
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- معلومات الطالب -->
+        <div class="student-info-form animate__animated animate__fadeIn">
+            <h2 class="section-title">
+                <i class="fas fa-user-graduate"></i>
+                معلومات الطالب
+            </h2>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="student-name">
+                        <i class="fas fa-user"></i> اسم الطالب
+                    </label>
+                    <input type="text" id="student-name" placeholder="أدخل اسمك" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="student-age">
+                        <i class="fas fa-birthday-cake"></i> العمر
+                    </label>
+                    <select id="student-age" class="form-input">
+                        <option value="9">9 سنوات</option>
+                        <option value="10" selected>10 سنوات</option>
+                        <option value="11">11 سنوات</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="student-class">
+                        <i class="fas fa-school"></i> المدرسة
+                    </label>
+                    <input type="text" id="student-class" placeholder="اسم المدرسة" class="form-input">
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- زر البداية -->
+        <div class="start-action animate__animated animate__pulse animate__infinite">
+            <button id="start-game" class="start-button">
+                <i class="fas fa-play-circle"></i>
+                <span>ابدأ المغامرة</span>
+                <div class="button-sparkle"></div>
+            </button>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- شاشة التقييم -->
+<div id="assessment-screen" class="screen">
+    <div class="assessment-container">
+        <!-- رأس التقييم -->
+        <div class="assessment-header">
+            <button class="back-button" id="back-to-start">
+                <i class="fas fa-arrow-right"></i>
+                <span>العودة</span>
+            </button>
+
+            <div class="assessment-info">
+                <h2 class="assessment-title">
+                    <i class="fas fa-clipboard-list"></i>
+                    اختبار تحديد المستوى
+                </h2>
+                <p class="assessment-subtitle">
+                    سنحدد مستواك لنضع لك الخطة التعليمية المناسبة
+                </p>
+            </div>
+
+            <div class="assessment-progress">
+                <div class="progress-visual">
+                    <div class="progress-circle">
+                        <svg width="80" height="80" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" class="progress-bg"></circle>
+                            <circle cx="50" cy="50" r="40" class="progress-fg"
+                                    stroke-dasharray="251.2"
+                                    stroke-dashoffset="251.2"
+                                    id="progress-circle"></circle>
+                        </svg>
+                        <div class="progress-percent" id="progress-percent">0%</div>
+                    </div>
+                </div>
+                <div class="progress-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="current-question">1</span>
+                        <span class="stat-label">سؤال</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="total-questions">15</span>
+                        <span class="stat-label">إجمالي</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="correct-count">0</span>
+                        <span class="stat-label">صحيح</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- منطقة السؤال -->
+        <div class="question-area">
+            <div class="question-card" id="question-card">
+                <div class="question-header">
+                    <div class="topic-tag" id="topic-tag">
+                        <i class="fas fa-tag"></i>
+                        <span>الأعداد الكبيرة</span>
+                    </div>
+                    <div class="difficulty-badge" id="difficulty-badge">
+                        <i class="fas fa-star"></i>
+                        <span>سهل</span>
+                    </div>
+                </div>
+
+                <div class="question-content">
+                    <h3 class="question-text" id="question-text">
+                        ما قيمة الرقم 5 في العدد ٥٤٣،٢١٦؟
+                    </h3>
+
+                    <div class="question-visual" id="question-visual">
+                        <!-- العناصر المرئية للأسئلة -->
+                    </div>
+
+                    <div class="hint-area" id="hint-area">
+                        <button class="hint-button" id="show-hint">
+                            <i class="fas fa-lightbulb"></i>
+                            تلميح
+                        </button>
+                        <div class="hint-content" id="hint-content" style="display: none;">
+                            <p>تذكر أن قيمة الرقم تعتمد على منزلته في العدد</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منطقة الإجابات -->
+            <div class="answers-area">
+                <div class="game-type-indicator" id="game-type-indicator">
+                    <span class="game-type-text">اختر الإجابة الصحيحة</span>
+                    <div class="game-type-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="answers-grid" id="answers-grid">
+                    <!-- الإجابات تظهر هنا -->
+                </div>
+
+                <!-- لوحة الأرقام (للأسئلة الكتابية) -->
+                <div class="number-pad" id="number-pad" style="display: none;">
+                    <div class="number-display" id="number-display">0</div>
+                    <div class="number-buttons">
+                        <div class="number-row">
+                            <button class="num-btn" data-number="1">1</button>
+                            <button class="num-btn" data-number="2">2</button>
+                            <button class="num-btn" data-number="3">3</button>
+                        </div>
+                        <div class="number-row">
+                            <button class="num-btn" data-number="4">4</button>
+                            <button class="num-btn" data-number="5">5</button>
+                            <button class="num-btn" data-number="6">6</button>
+                        </div>
+                        <div class="number-row">
+                            <button class="num-btn" data-number="7">7</button>
+                            <button class="num-btn" data-number="8">8</button>
+                            <button class="num-btn" data-number="9">9</button>
+                        </div>
+                        <div class="number-row">
+                            <button class="num-btn" data-number="0">0</button>
+                            <button class="num-btn" id="clear-btn">
+                                <i class="fas fa-backspace"></i>
+                            </button>
+                            <button class="num-btn submit-btn" id="submit-answer">
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- منطقة السحب والإفلات -->
+                <div class="drag-drop-area" id="drag-drop-area" style="display: none;">
+                    <div class="drag-items" id="drag-items">
+                        <!-- العناصر القابلة للسحب -->
+                    </div>
+                    <div class="drop-zone" id="drop-zone">
+                        <div class="drop-placeholder">
+                            <i class="fas fa-hand-point-up"></i>
+                            <p>اسحب الإجابة الصحيحة إلى هنا</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="navigation-controls">
+            <button class="nav-btn prev-btn" id="prev-question">
+                <i class="fas fa-arrow-right"></i>
+                السابق
+            </button>
+
+            <div class="question-counter">
+                <span id="question-counter">سؤال 1 من 15</span>
+            </div>
+
+            <button class="nav-btn next-btn" id="next-question">
+                التالي
+                <i class="fas fa-arrow-left"></i>
+            </button>
+
+            <button class="nav-btn submit-btn" id="finish-assessment">
+                <i class="fas fa-flag-checkered"></i>
+                إنهاء الاختبار
+            </button>
+        </div>
+
+        <!-- المؤقت -->
+        <div class="timer-container">
+            <div class="timer-display" id="timer-display">
+                <i class="fas fa-clock"></i>
+                <span id="timer-text">02:00</span>
+            </div>
+            <div class="timer-bar">
+                <div class="timer-fill" id="timer-fill"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- شاشة النتائج -->
+<div id="results-screen" class="screen">
+    <div class="results-container">
+        <!-- احتفالية النتائج -->
+<!--        <div class="celebration-area" id="celebration-area">-->
+<!--            <div class="confetti-container" id="confetti-container"></div>-->
+
+<!--            <div class="result-title animate__animated animate__bounceIn">-->
+<!--                <h1 id="result-main-title">🎉 مبروك! 🎉</h1>-->
+<!--                <h2 id="result-subtitle">لقد أكملت الاختبار بنجاح</h2>-->
+<!--            </div>-->
+
+<!--            <div class="trophy-display animate__animated animate__zoomIn">-->
+<!--                <div class="main-trophy" id="main-trophy">-->
+<!--                    <i class="fas fa-trophy"></i>-->
+<!--                </div>-->
+<!--                <div class="trophy-sparkles"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <!-- المستوى العام -->
+        <div class="overall-result animate__animated animate__fadeInUp">
+            <div class="level-card" id="level-card">
+                <div class="level-badge" id="level-badge">
+                    <div class="level-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="level-info">
+                        <h3 id="level-title">المستوى المبتدئ</h3>
+                        <div class="level-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="level-progress-fill"></div>
+                            </div>
+                            <span id="level-percentage">45%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="score-display">
+                    <div class="score-item">
+                        <div class="score-label">الدرجة الكلية</div>
+                        <div class="score-value" id="total-score">675</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">النسبة المئوية</div>
+                        <div class="score-value" id="percentage-score">45%</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">الوقت المستخدم</div>
+                        <div class="score-value" id="time-used">4:30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- تحليل الموضوعات -->
+<!--        <div class="topics-analysis animate__animated animate__fadeInUp">-->
+<!--            <h2 class="section-title">-->
+<!--                <i class="fas fa-analytics"></i>-->
+<!--                تحليل أدائك في الموضوعات-->
+<!--            </h2>-->
+
+<!--            <div class="topics-grid" id="topics-grid">-->
+<!--                &lt;!&ndash; الموضوعات تظهر هنا &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <!-- نقاط القوة والضعف -->
+<!--        <div class="strengths-weaknesses animate__animated animate__fadeInUp">-->
+<!--            <div class="strengths-section">-->
+<!--                <div class="section-header success">-->
+<!--                    <i class="fas fa-check-circle"></i>-->
+<!--                    <h3>نقاط قوتك</h3>-->
+<!--                </div>-->
+<!--                <div class="items-list" id="strengths-list">-->
+<!--                    <div class="strength-item">-->
+<!--                        <i class="fas fa-star"></i>-->
+<!--                        <span>الأعداد الكبيرة</span>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; المزيد &ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="weaknesses-section">-->
+<!--                <div class="section-header warning">-->
+<!--                    <i class="fas fa-exclamation-triangle"></i>-->
+<!--                    <h3>تحتاج تحسين</h3>-->
+<!--                </div>-->
+<!--                <div class="items-list" id="weaknesses-list">-->
+<!--                    <div class="weakness-item">-->
+<!--                        <i class="fas fa-lightbulb"></i>-->
+<!--                        <span>المسائل الكلامية</span>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; المزيد &ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <!-- التوصيات -->
+<!--        <div class="recommendations animate__animated animate__fadeInUp">-->
+<!--            <h2 class="section-title">-->
+<!--                <i class="fas fa-bullseye"></i>-->
+<!--                توصيات للتحسين-->
+<!--            </h2>-->
+
+<!--            <div class="recommendations-list" id="recommendations-list">-->
+<!--                <div class="recommendation-card">-->
+<!--                    <div class="rec-icon">-->
+<!--                        <i class="fas fa-book"></i>-->
+<!--                    </div>-->
+<!--                    <div class="rec-content">-->
+<!--                        <h4>ركز على المسائل الكلامية</h4>-->
+<!--                        <p>تدرب على تحويل المسائل الكلامية إلى معادلات رياضية</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; المزيد &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <!-- الخطة الدراسية -->
+
+        <!-- أزرار الإجراءات -->
+        <div class="action-buttons animate__animated animate__fadeInUp">
+            <button class="back-button" id="back-to-start1">
+                <i class="fas fa-arrow-right"></i>
+                <span>العودة</span>
+            </button>
+
+            <button class="action-btn review-btn" id="review-answers">
+                <i class="fas fa-redo"></i>
+                <span>مراجعة الإجابات</span>
+            </button>
+
+            <button class="action-btn share-btn" id="share-results">
+                <i class="fas fa-share-alt"></i>
+                <span>مشاركة النتائج</span>
+            </button>
+
+            <button class="action-btn new-test-btn" id="new-test">
+                <i class="fas fa-sync"></i>
+                <span>اختبار جديد</span>
+            </button>
+        </div>
+
+        <!-- الشهادات -->
+    </div>
+</div>
+
+<!-- شاشة اللعبة -->
+<div id="game-screen" class="screen">
+    <!-- ستبقى كما هي مع تعديلات للمنهج -->
+</div>
+
+<!-- الرسائل المنبثقة -->
+<div class="message-popup" id="message-popup">
+    <div class="popup-content">
+        <div class="popup-icon" id="popup-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="popup-title" id="popup-title">إجابة صحيحة!</h3>
+        <p class="popup-message" id="popup-message"></p>
+        <button class="popup-button" id="popup-ok">متابعة</button>
+    </div>
+</div>
+
+<!-- المؤثرات الصوتية -->
+<audio id="correct-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3"></audio>
+<audio id="wrong-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3"></audio>
+<audio id="win-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.mp3"></audio>
+<audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
+<audio id="level-up-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3"></audio>
+
+<script src="games.js"></script>
+<script src="questions.js"></script>
+<script src="animations.js"></script>
+</body>
+</html>

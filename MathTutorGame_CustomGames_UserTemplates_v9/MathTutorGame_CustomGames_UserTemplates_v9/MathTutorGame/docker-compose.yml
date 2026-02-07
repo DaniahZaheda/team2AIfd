@@ -1,0 +1,25 @@
+services:
+  api:
+    build: .
+    ports:
+      - "5050:5050"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - LLM_MODEL=gemma3:latest
+      - EMBED_MODEL=embeddinggemma:latest
+      - CHROMA_PATH=/app/chroma_db
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./app/data:/app/app/data
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+
+volumes:
+  ollama:

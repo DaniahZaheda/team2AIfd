@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الخطة العلاجية - Math Tutor</title>
+  <link rel="stylesheet" href="/ui/diagnostic/games.css" />
+  <style>
+    .container{max-width:980px;margin:0 auto;padding:20px}
+    .card{background:rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:16px;margin:12px 0}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.1);margin:4px 6px 0 0;font-size:.95rem}
+    .btn{cursor:pointer;border:none;border-radius:14px;padding:10px 14px;font-weight:700}
+    .btn-primary{background:#cf2e2e;color:#fff}
+    .btn-ghost{background:rgba(255,255,255,0.12);color:#fff}
+    .muted{opacity:.85}
+    iframe{border:0;border-radius:14px;width:100%;height:320px}
+    .q{padding:12px;border-radius:14px;background:rgba(255,255,255,0.08);margin:10px 0}
+    .choices{display:grid;gap:8px;margin-top:8px}
+    .choice{padding:10px;border-radius:12px;background:rgba(255,255,255,0.10);cursor:pointer}
+    .choice:hover{background:rgba(255,255,255,0.16)}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    /* Chat */
+    #chatFab{position:fixed;left:18px;bottom:18px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#22c55e;color:#fff;font-size:26px;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:50}
+    #chatPanel{position:fixed;left:18px;bottom:86px;width:320px;max-width:calc(100vw - 36px);height:420px;background:rgba(10,10,10,.92);border:1px solid rgba(255,255,255,.12);border-radius:16px;display:none;flex-direction:column;overflow:hidden;z-index:50}
+    #chatHeader{padding:10px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.12)}
+    #chatMsgs{flex:1;padding:10px;overflow:auto;background-color: #00b09b;}
+    .msg{margin:8px 0;padding:10px;border-radius:14px;max-width:90%}
+    .me{background:rgba(124,58,237,.35);margin-right:auto}
+    .bot{background:rgba(255,255,255,.10);margin-left:auto}
+    #chatInputRow{display:flex;gap:8px;padding:10px;border-top:1px solid #2b655e;background-color: #00b09b;}
+    #chatInput{flex:1;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;padding:10px}
+
+    /* --- Fun game additions (post-diagnostic only) --- */
+    .hud{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .hud .stat{background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.14);padding:8px 12px;border-radius:999px;font-weight:800}
+    .mini{font-size:.95rem;opacity:.9}
+    .lock{opacity:.55;filter:grayscale(0.4)}
+    .dropzone{min-height:52px;border-radius:14px;border:2px dashed rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;padding:10px;margin-top:10px;background:rgba(0,0,0,.10)}
+    .draggables{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .dragItem{padding:10px 14px;border-radius:14px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,.18);cursor:grab;font-weight:800}
+    .dragItem:active{cursor:grabbing}
+    .dropzone.over{background:rgba(34,197,94,.18);border-color:rgba(34,197,94,.65)}
+    .matchRow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .matchLeft{min-width:140px;font-weight:800}
+    .matchZone{flex:1}
+    .reorderList{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+    .reorderItem{padding:10px 14px;border-radius:14px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,.18);cursor:grab;font-weight:800}
+    .toast{position:fixed;right:18px;bottom:18px;background:rgba(10,10,10,.92);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:12px 14px;z-index:2000;display:none;max-width:340px}
+
+    /* --- Plan day cards (overview) --- */
+    .dayGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:12px}
+    .dayCard{background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:14px;position:relative;overflow:hidden;cursor:pointer;transition:transform .15s ease, background .15s ease}
+    .dayCard:hover{transform:translateY(-2px);background:rgba(0,0,0,0.28)}
+    .dayCard .title{font-weight:900;font-size:1.15rem}
+    .dayCard .meta{margin-top:6px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .dayCard .meta .chip{background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.14);padding:6px 10px;border-radius:999px;font-weight:800}
+    .dayCard .skills{margin-top:10px}
+    .dayCard .skills .pill{font-size:.9rem}
+    .dayCard .cta{margin-top:12px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+    .progressBar{height:10px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:999px;overflow:hidden}
+    .progressBar > div{height:100%;background:rgba(34,197,94,.75);width:0%}
+    .sparkle{position:absolute;inset:auto -30% -30% auto;width:220px;height:220px;background:radial-gradient(circle at 30% 30%, rgba(124,58,237,.35), transparent 60%);transform:rotate(25deg)}
+
+    /* --- Day view wrapper --- */
+    #dayView{display:none}
+    .backRow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+
+    /* --- Mini-game visuals --- */
+    .gameShell{margin-top:10px;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);padding:12px;position:relative;overflow:hidden}
+    .gameTitle{font-weight:900;margin:0 0 8px 0;display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .badgeMini{background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.14);padding:6px 10px;border-radius:999px;font-weight:900}
+
+    /* --- Mega exam wrapper (one game contains many questions) --- */
+    .megaExam{border-radius:20px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.18);padding:12px;overflow:hidden}
+    .megaHeader{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .megaTitle{font-weight:950;font-size:1.05rem}
+    .megaCounter{background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.14);padding:6px 10px;border-radius:999px;font-weight:900}
+    .megaStage{margin-top:10px}
+    .fadeIn{animation:fadeIn .22s ease}
+    @keyframes fadeIn{from{opacity:.0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+    /* Train game */
+    .trainTrack{position:relative;height:86px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.12));border:1px solid rgba(255,255,255,.10);overflow:hidden}
+    .train{position:absolute;bottom:10px;right:10px;display:flex;gap:8px;align-items:center;animation:trainWiggle 1.2s ease-in-out infinite}
+    .engine{width:56px;height:38px;border-radius:12px;background:rgba(124,58,237,.40);border:1px solid rgba(255,255,255,.18);position:relative}
+    .engine:after{content:"";position:absolute;left:10px;top:10px;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.7)}
+    .wagon{width:82px;height:38px;border-radius:12px;background:rgba(255,255,255,.10);border:1px dashed rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-weight:900}
+    .smoke{position:absolute;top:-6px;right:10px;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25);animation:smoke 1.2s ease-in-out infinite}
+    @keyframes trainWiggle{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+
+    .train.run{animation:trainRun 1.2s ease-in-out forwards}
+    @keyframes trainRun{0%{transform:translateX(0)}45%{transform:translateX(-220px)}100%{transform:translateX(0)}}
+    .balloonFly{animation:balloonFly 0.9s ease-in forwards}
+    @keyframes balloonFly{0%{transform:translateY(0)}100%{transform:translateY(-140px);opacity:0}}
+    .rocketPad.shakePad{animation:shake .28s ease}
+
+    @keyframes smoke{0%{transform:translateY(8px) scale(.6);opacity:.0}35%{opacity:.35}100%{transform:translateY(-18px) scale(1.4);opacity:0}}
+
+    /* Rocket game */
+    .rocketPad{position:relative;height:120px;border-radius:16px;background:linear-gradient(180deg, rgba(34,197,94,.12), rgba(0,0,0,.14));border:1px solid rgba(255,255,255,.10);overflow:hidden}
+    .rocket{position:absolute;bottom:10px;right:24px;width:36px;height:48px;border-radius:18px 18px 10px 10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18)}
+    .rocket:before{content:"";position:absolute;top:-14px;right:6px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:14px solid rgba(255,255,255,.14)}
+    .rocket.flame:after{content:"";position:absolute;bottom:-14px;right:10px;width:16px;height:16px;border-radius:50%;background:rgba(245,158,11,.55);filter:blur(1px)}
+    .rocket.launch{animation:launch 1.2s ease-in forwards}
+    @keyframes launch{0%{transform:translateY(0)}100%{transform:translateY(-160px);opacity:0}}
+
+    /* Pop highlight */
+    .pop{animation:pop .22s ease}
+    @keyframes pop{0%{transform:scale(1)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+    /* Feedback animations */
+    .shake{animation:shake .28s ease}
+    @keyframes shake{0%{transform:translateX(0)}25%{transform:translateX(6px)}50%{transform:translateX(-6px)}75%{transform:translateX(4px)}100%{transform:translateX(0)}}
+    .correctFlash{box-shadow:0 0 0 0 rgba(34,197,94,.0);animation:glow .45s ease}
+    @keyframes glow{0%{box-shadow:0 0 0 0 rgba(34,197,94,.0)}45%{box-shadow:0 0 0 8px rgba(34,197,94,.25)}100%{box-shadow:0 0 0 0 rgba(34,197,94,.0)}}
+
+    /* Balloon floating */
+    .dropzone{position:relative}
+    .dropzone:before{content:"";position:absolute;inset:-40px -20px auto auto;width:120px;height:120px;background:radial-gradient(circle at 30% 30%, rgba(59,130,246,.25), transparent 60%);transform:rotate(10deg);pointer-events:none}
+    .dropzone.pop{animation:balloonPop .35s ease}
+    @keyframes balloonPop{0%{transform:scale(1)}55%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+    /* Balloon POP game (click balloons) */
+    .balloonField{position:relative;height:190px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.10);
+      background:radial-gradient(circle at 30% 20%, rgba(34,197,94,.16), rgba(0,0,0,.16) 58%);
+    }
+    .balloon{position:absolute;bottom:-40px;width:120px;height:120px;border-radius:999px;
+      background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), rgba(124,58,237,.22) 50%, rgba(0,0,0,.12) 92%);
+      border:1px solid rgba(255,255,255,.22);
+      display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.4rem;cursor:pointer;
+      user-select:none;box-shadow:0 18px 30px rgba(0,0,0,.22);
+      animation:floatUp 6.8s linear infinite;
+    }
+    .balloon:after{content:"";position:absolute;bottom:-26px;left:50%;transform:translateX(-50%);width:2px;height:34px;background:rgba(255,255,255,.25)}
+    @keyframes floatUp{0%{transform:translateY(0)}100%{transform:translateY(-280px)}}
+    .balloon.popOut{animation:popOut .35s ease forwards}
+    @keyframes popOut{0%{transform:scale(1)}55%{transform:scale(1.12)}100%{transform:scale(.2);opacity:0}}
+
+    /* Sort race slots */
+    .slotTrack{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+    .slot{min-height:70px;border-radius:16px;border:2px dashed rgba(255,255,255,.30);background:rgba(0,0,0,.08);padding:10px;display:flex;flex-direction:column;justify-content:center;align-items:center;transition:transform .12s ease, background .12s ease, border-color .12s ease}
+    .slot.over{background:rgba(124,58,237,.15);border-color:rgba(124,58,237,.65);transform:translateY(-2px)}
+    .slot.filled{border-style:solid;border-color:rgba(34,197,94,.55);background:rgba(34,197,94,.10)}
+    .slotNum{font-weight:900;opacity:.9}
+    .slotVal{margin-top:6px;font-weight:900}
+    .slotTrack.win .slot{animation:pop .22s ease}
+
+    .dragItem.dragging{opacity:.65;transform:scale(.98)}
+
+
+    /* --- Cartoon helpers (3D-ish) --- */
+    .heroRow{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:14px}
+    .heroCard{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:10px 12px;box-shadow:0 18px 40px rgba(0,0,0,.25);margin:30px 0px;}
+    .heroImg{width:92px;height:92px;border-radius:20px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14), 0 12px 26px rgba(0,0,0,.28)}
+    .heroImg img{width:120px;height:auto;transform:translateY(8px);filter:drop-shadow(0 14px 18px rgba(0,0,0,.35))}
+    .heroTalk{flex:1;min-width:220px}
+    .speech{background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:10px 12px;position:relative}
+    .speech:after{content:"";position:absolute;right:24px;bottom:-10px;border-width:10px 10px 0 10px;border-style:solid;border-color:rgba(255,255,255,.10) transparent transparent transparent;filter:drop-shadow(0 6px 6px rgba(0,0,0,.18))}
+    .speech .name{font-weight:900;margin-bottom:6px}
+    .speech .txt{opacity:.95;line-height:1.45}
+    .pulse{animation:pulse 1.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+
+    /* --- Loading overlay while generating plan --- */
+    #loadingOverlay{position:fixed;inset:0;background:radial-gradient(circle at 30% 20%, rgba(124,58,237,.45), rgba(0,0,0,.88) 55%);display:none;align-items:center;justify-content:center;z-index:2000;padding:18px}
+    .loadBox{max-width:760px;width:100%;background:rgba(10,10,10,.55);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:16px 16px 18px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+    .loadTop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .loadDots{display:flex;gap:6px;align-items:center}
+    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.22);animation:dot 1.1s infinite}
+    .dot:nth-child(2){animation-delay:.15s}
+    .dot:nth-child(3){animation-delay:.3s}
+    @keyframes dot{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-6px);opacity:1}}
+    .loadBar{height:10px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);border-radius:999px;overflow:hidden;margin-top:12px}
+    .loadBar > div{height:100%;width:20%;background:rgba(34,197,94,.80);animation:bar 1.2s ease-in-out infinite}
+    @keyframes bar{0%{transform:translateX(-120%)}100%{transform:translateX(520%)}}
+
+    /* Chat prettier */
+    #chatFab{background:linear-gradient(180deg,#7c3aed,#22c55e)}
+    #chatPanel{background:linear-gradient(180deg, rgba(25,15,45,.95), rgba(10,10,10,.94))}
+    .me{background:linear-gradient(180deg, rgba(124,58,237,.55), rgba(124,58,237,.28))}
+    .bot{background:linear-gradient(180deg, rgba(34,197,94,.30), rgba(255,255,255,.10))}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      
+      <div>
+        <div class="row"></div>
+        <h1 style="margin:0;">الخطة العلاجية 🎯</h1>
+        <div class="muted">15 دقيقة يوميًا — فيديو + شرح + ألعاب</div>
+
+      <div class="row">
+        <div class="hud" style="margin-inline-end:10px">
+          <div class="stat" id="hudStars">⭐ 0</div>
+          <div class="stat" id="hudCoins">🪙 0</div>
+          <div class="stat" id="hudBadges">🏅 0</div>
+        </div>
+        <button class="btn btn-ghost" onclick="location.href='/ui/diagnostic/index.html'">رجوع للتشخيص</button>
+        <button class="btn btn-primary" id="genBtn">توليد الخطة</button>
+      </div>
+
+        <div class="heroRow">
+          <div class="heroCard">
+            <div class="heroImg"><img src="/ui/assets/characters/boy.png" alt="ولد" /></div>
+            <div class="heroTalk">
+              <div class="speech pulse">
+                <div class="name"> أُسيد</div>
+                <div class="txt" id="heroBoyTxt">جاهزين نلعب ونتعلم رياضيات؟🚀</div>
+              </div>
+            </div>
+          </div>
+          <div class="heroCard">
+            <div class="heroImg"><img src="/ui/assets/characters/girl.png" alt="فتاة" /></div>
+            <div class="heroTalk">
+              <div class="speech pulse">
+                <div class="name"> لمى</div>
+                <div class="txt" id="heroGirlTxt">كل إجابة صحيحة = نجوم أكثر! ⭐</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+   
+    </div>
+
+    <div id="planView">
+      <div class="card" id="missingSkillsCard">
+        <div class="muted">المهارات الناقصة.</div>
+        <input id="skillsInput" placeholder="مثال: G1_add_within_10, G1_sub_within_10" style="width:100%;margin-top:10px;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;" />
+        <div id="skillsPills" style="margin-top:10px"></div>
+      </div>
+
+      <div id="planOut"></div>
+    </div>
+
+    <div id="dayView">
+      <div class="card">
+        <div class="backRow">
+          <button class="btn btn-ghost" id="backToPlan">⬅ رجوع للأيام</button>
+          <div class="muted" id="dayMeta"></div><div class="pill" id="dayGameMode" style="margin-inline-start:10px"></div>
+        </div>
+      </div>
+      <div id="dayOut"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- Chat -->
+  <div id="chatFab" title="اسأل المساعد">💬</div>
+  <div id="chatPanel">
+    <div id="chatHeader">
+      <div>مساعد المنهاج</div>
+      <button class="btn btn-ghost" style="padding:6px 10px" id="chatClose">✕</button>
+    </div>
+    <div id="chatMsgs"></div>
+    <div id="chatInputRow">
+      <input id="chatInput"  placeholder="اكتب سؤالك..." />
+      <button class="btn btn-primary" id="chatSend">إرسال</button>
+    </div>
+  </div>
+
+
+  <!-- Loading overlay -->
+  <div id="loadingOverlay">
+    <div class="loadBox">
+      <div class="loadTop">
+        <div style="font-weight:900;font-size:1.15rem">نجهّز لك الخطة العلاجية… 🎯</div>
+        <div class="loadDots" aria-hidden="true"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+      <div class="heroRow" style="margin-top:12px">
+        <div class="heroCard" style="flex:1">
+          <div class="heroImg"><img src="/ui/assets/characters/boy.png" alt="ولد" /></div>
+          <div class="heroTalk">
+            <div class="speech">
+              <div class="name">👦 أُسيد</div>
+              <div class="txt" id="loadBoySay">أنا أُسيد! الرياضيات بتخلّينا أذكياء ونحل مشاكل بسرعة 😄</div>
+            </div>
+          </div>
+        </div>
+        <div class="heroCard" style="flex:1">
+          <div class="heroImg"><img src="/ui/assets/characters/girl.png" alt="فتاة" /></div>
+          <div class="heroTalk">
+            <div class="speech">
+              <div class="name">👧 لُمى</div>
+              <div class="txt" id="loadGirlSay">وأنا لُمى! خلّينا نتعلّم ونلعب… وبعدها مفرقعات! 🎉</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="loadBar"><div></div></div>
+      <div class="muted mini" style="margin-top:10px" id="loadTip">نصيحة: شاهدي الفيديو أولاً ثم العبِ اللعبة ✅</div>
+    </div>
+  </div>
+
+  <!-- Sound effects -->
+  <audio id="sfxSuccess" src="/ui/assets/sounds/success.wav" preload="auto"></audio>
+  <audio id="sfxError" src="/ui/assets/sounds/error.wav" preload="auto"></audio>
+  <audio id="sfxPop" src="/ui/assets/sounds/pop.wav" preload="auto"></audio>
+  <audio id="sfxRocket" src="/ui/assets/sounds/rocket.wav" preload="auto"></audio>
+  <audio id="sfxTrain" src="/ui/assets/sounds/train.wav" preload="auto"></audio>
+
+  <script src="/ui/diagnostic/animations.js"></script>
+  <script src="/ui/plan.js"></script>
+</body>
+</html>
